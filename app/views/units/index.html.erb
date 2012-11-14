@@ -1,0 +1,73 @@
+<h1>Listing units</h1>
+
+<table>
+  <tr>
+    <th>Bedrooms</th>
+    <th>Bathrooms</th>
+    <th>Square footage</th>
+    <th>Available parking</th>
+    <th>Parking type</th>
+    <th>Date available</th>
+    <th>Monthly rent</th>
+    <th>Application fee</th>
+    <th>Application form</th>
+    <th>Pets allowed</th>
+    <th>Pet deposit</th>
+    <th>Access</th>
+    <th>Commission percentage</th>
+    <th>Occupant</th>
+    <th>Tenant name</th>
+    <th>Tenant phone number</th>
+    <th>Contact name</th>
+    <th>Contact phone number</th>
+    <th>Address line 1</th>
+    <th>Address line 2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zipcode</th>
+    <th>Status</th>
+    <th>Availability</th>
+    <th>Agent remarks</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @units.each do |unit| %>
+  <tr>
+    <td><%= unit.bedrooms %></td>
+    <td><%= unit.bathrooms %></td>
+    <td><%= unit.square_footage %></td>
+    <td><%= unit.available_parking %></td>
+    <td><%= unit.parking_type %></td>
+    <td><%= unit.date_available %></td>
+    <td><%= unit.monthly_rent %></td>
+    <td><%= unit.application_fee %></td>
+    <td><%= unit.application_form %></td>
+    <td><%= unit.pets_allowed %></td>
+    <td><%= unit.pet_deposit %></td>
+    <td><%= unit.access %></td>
+    <td><%= unit.commission_percentage %></td>
+    <td><%= unit.occupant %></td>
+    <td><%= unit.tenant_name %></td>
+    <td><%= unit.tenant_phone_number %></td>
+    <td><%= unit.contact_name %></td>
+    <td><%= unit.contact_phone_number %></td>
+    <td><%= unit.address_line_1 %></td>
+    <td><%= unit.address_line_2 %></td>
+    <td><%= unit.city %></td>
+    <td><%= unit.state %></td>
+    <td><%= unit.zipcode %></td>
+    <td><%= unit.status %></td>
+    <td><%= unit.availability %></td>
+    <td><%= unit.agent_remarks %></td>
+    <td><%= link_to 'Show', unit %></td>
+    <td><%= link_to 'Edit', edit_unit_path(unit) %></td>
+    <td><%= link_to 'Destroy', unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Unit', new_unit_path %>

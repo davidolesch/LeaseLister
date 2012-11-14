@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  bedrooms: 1
+  bathrooms: 1.5
+  square_footage: 1
+  available_parking: 1
+  parking_type: MyString
+  date_available: 2012-11-13
+  monthly_rent: 1.5
+  application_fee: 1.5
+  application_form: MyString
+  pets_allowed: MyString
+  pet_deposit: 1.5
+  access: MyString
+  commission_percentage: 1.5
+  occupant: MyString
+  tenant_name: MyString
+  tenant_phone_number: MyString
+  contact_name: MyString
+  contact_phone_number: MyString
+  address_line_1: MyString
+  address_line_2: MyString
+  city: MyString
+  state: MyString
+  zipcode: 1
+  status: MyString
+  availability: MyString
+  agent_remarks: MyText
+
+two:
+  bedrooms: 1
+  bathrooms: 1.5
+  square_footage: 1
+  available_parking: 1
+  parking_type: MyString
+  date_available: 2012-11-13
+  monthly_rent: 1.5
+  application_fee: 1.5
+  application_form: MyString
+  pets_allowed: MyString
+  pet_deposit: 1.5
+  access: MyString
+  commission_percentage: 1.5
+  occupant: MyString
+  tenant_name: MyString
+  tenant_phone_number: MyString
+  contact_name: MyString
+  contact_phone_number: MyString
+  address_line_1: MyString
+  address_line_2: MyString
+  city: MyString
+  state: MyString
+  zipcode: 1
+  status: MyString
+  availability: MyString
+  agent_remarks: MyText
