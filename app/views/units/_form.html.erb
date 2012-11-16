@@ -1,121 +1,164 @@
-<%= form_for(@unit) do |f| %>
-  <% if @unit.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@unit.errors.count, "error") %> prohibited this unit from being saved:</h2>
-
-      <ul>
-      <% @unit.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= form_for @unit, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :bedrooms, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :bedrooms, :class => 'number_field' %>
     </div>
-  <% end %>
+  </div>
+  <div class="control-group">
+    <%= f.label :bathrooms, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :bathrooms, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :square_footage, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :square_footage, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :available_parking, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :available_parking, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :parking_type, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :parking_type, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :date_available, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :date_available, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :monthly_rent, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :monthly_rent, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :application_fee, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :application_fee, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :application_form, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :application_form, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :pets_allowed, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :pets_allowed, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :pet_deposit, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :pet_deposit, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :access, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :access, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :commission_percentage, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :commission_percentage, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :occupant, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :occupant, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :tenant_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tenant_name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :tenant_phone_number, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tenant_phone_number, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :contact_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :contact_name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :contact_phone_number, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :contact_phone_number, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :address_line_1, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :address_line_1, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :address_line_2, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :address_line_2, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :city, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :city, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :state, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :state, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :zipcode, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :zipcode, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :status, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :status, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :availability, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :availability, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :agent_remarks, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :agent_remarks, :class => 'text_area' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :bedrooms %><br />
-    <%= f.number_field :bedrooms %>
-  </div>
-  <div class="field">
-    <%= f.label :bathrooms %><br />
-    <%= f.text_field :bathrooms %>
-  </div>
-  <div class="field">
-    <%= f.label :square_footage %><br />
-    <%= f.number_field :square_footage %>
-  </div>
-  <div class="field">
-    <%= f.label :available_parking %><br />
-    <%= f.number_field :available_parking %>
-  </div>
-  <div class="field">
-    <%= f.label :parking_type %><br />
-    <%= f.text_field :parking_type %>
-  </div>
-  <div class="field">
-    <%= f.label :date_available %><br />
-    <%= f.date_select :date_available %>
-  </div>
-  <div class="field">
-    <%= f.label :monthly_rent %><br />
-    <%= f.text_field :monthly_rent %>
-  </div>
-  <div class="field">
-    <%= f.label :application_fee %><br />
-    <%= f.text_field :application_fee %>
-  </div>
-  <div class="field">
-    <%= f.label :application_form %><br />
-    <%= f.text_field :application_form %>
-  </div>
-  <div class="field">
-    <%= f.label :pets_allowed %><br />
-    <%= f.text_field :pets_allowed %>
-  </div>
-  <div class="field">
-    <%= f.label :pet_deposit %><br />
-    <%= f.text_field :pet_deposit %>
-  </div>
-  <div class="field">
-    <%= f.label :access %><br />
-    <%= f.text_field :access %>
-  </div>
-  <div class="field">
-    <%= f.label :commission_percentage %><br />
-    <%= f.text_field :commission_percentage %>
-  </div>
-  <div class="field">
-    <%= f.label :occupant %><br />
-    <%= f.text_field :occupant %>
-  </div>
-  <div class="field">
-    <%= f.label :tenant_name %><br />
-    <%= f.text_field :tenant_name %>
-  </div>
-  <div class="field">
-    <%= f.label :tenant_phone_number %><br />
-    <%= f.text_field :tenant_phone_number %>
-  </div>
-  <div class="field">
-    <%= f.label :contact_name %><br />
-    <%= f.text_field :contact_name %>
-  </div>
-  <div class="field">
-    <%= f.label :contact_phone_number %><br />
-    <%= f.text_field :contact_phone_number %>
-  </div>
-  <div class="field">
-    <%= f.label :address_line_1 %><br />
-    <%= f.text_field :address_line_1 %>
-  </div>
-  <div class="field">
-    <%= f.label :address_line_2 %><br />
-    <%= f.text_field :address_line_2 %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
-  </div>
-  <div class="field">
-    <%= f.label :zipcode %><br />
-    <%= f.number_field :zipcode %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br />
-    <%= f.text_field :status %>
-  </div>
-  <div class="field">
-    <%= f.label :availability %><br />
-    <%= f.text_field :availability %>
-  </div>
-  <div class="field">
-    <%= f.label :agent_remarks %><br />
-    <%= f.text_area :agent_remarks %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                units_path, :class => 'btn' %>
   </div>
 <% end %>

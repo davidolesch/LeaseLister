@@ -1,135 +1,71 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Unit -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
 
-<p>
-  <b>Bedrooms:</b>
-  <%= @unit.bedrooms %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:bedrooms) %>:</strong></dt>
+  <dd><%= @unit.bedrooms %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:bathrooms) %>:</strong></dt>
+  <dd><%= @unit.bathrooms %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:square_footage) %>:</strong></dt>
+  <dd><%= @unit.square_footage %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:available_parking) %>:</strong></dt>
+  <dd><%= @unit.available_parking %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:parking_type) %>:</strong></dt>
+  <dd><%= @unit.parking_type %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:date_available) %>:</strong></dt>
+  <dd><%= @unit.date_available %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:monthly_rent) %>:</strong></dt>
+  <dd><%= @unit.monthly_rent %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:application_fee) %>:</strong></dt>
+  <dd><%= @unit.application_fee %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:application_form) %>:</strong></dt>
+  <dd><%= @unit.application_form %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pets_allowed) %>:</strong></dt>
+  <dd><%= @unit.pets_allowed %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pet_deposit) %>:</strong></dt>
+  <dd><%= @unit.pet_deposit %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:access) %>:</strong></dt>
+  <dd><%= @unit.access %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:commission_percentage) %>:</strong></dt>
+  <dd><%= @unit.commission_percentage %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:occupant) %>:</strong></dt>
+  <dd><%= @unit.occupant %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tenant_name) %>:</strong></dt>
+  <dd><%= @unit.tenant_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tenant_phone_number) %>:</strong></dt>
+  <dd><%= @unit.tenant_phone_number %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:contact_name) %>:</strong></dt>
+  <dd><%= @unit.contact_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:contact_phone_number) %>:</strong></dt>
+  <dd><%= @unit.contact_phone_number %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address_line_1) %>:</strong></dt>
+  <dd><%= @unit.address_line_1 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address_line_2) %>:</strong></dt>
+  <dd><%= @unit.address_line_2 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:city) %>:</strong></dt>
+  <dd><%= @unit.city %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:state) %>:</strong></dt>
+  <dd><%= @unit.state %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:zipcode) %>:</strong></dt>
+  <dd><%= @unit.zipcode %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:status) %>:</strong></dt>
+  <dd><%= @unit.status %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:availability) %>:</strong></dt>
+  <dd><%= @unit.availability %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:agent_remarks) %>:</strong></dt>
+  <dd><%= @unit.agent_remarks %></dd>
+</dl>
 
-<p>
-  <b>Bathrooms:</b>
-  <%= @unit.bathrooms %>
-</p>
-
-<p>
-  <b>Square footage:</b>
-  <%= @unit.square_footage %>
-</p>
-
-<p>
-  <b>Available parking:</b>
-  <%= @unit.available_parking %>
-</p>
-
-<p>
-  <b>Parking type:</b>
-  <%= @unit.parking_type %>
-</p>
-
-<p>
-  <b>Date available:</b>
-  <%= @unit.date_available %>
-</p>
-
-<p>
-  <b>Monthly rent:</b>
-  <%= @unit.monthly_rent %>
-</p>
-
-<p>
-  <b>Application fee:</b>
-  <%= @unit.application_fee %>
-</p>
-
-<p>
-  <b>Application form:</b>
-  <%= @unit.application_form %>
-</p>
-
-<p>
-  <b>Pets allowed:</b>
-  <%= @unit.pets_allowed %>
-</p>
-
-<p>
-  <b>Pet deposit:</b>
-  <%= @unit.pet_deposit %>
-</p>
-
-<p>
-  <b>Access:</b>
-  <%= @unit.access %>
-</p>
-
-<p>
-  <b>Commission percentage:</b>
-  <%= @unit.commission_percentage %>
-</p>
-
-<p>
-  <b>Occupant:</b>
-  <%= @unit.occupant %>
-</p>
-
-<p>
-  <b>Tenant name:</b>
-  <%= @unit.tenant_name %>
-</p>
-
-<p>
-  <b>Tenant phone number:</b>
-  <%= @unit.tenant_phone_number %>
-</p>
-
-<p>
-  <b>Contact name:</b>
-  <%= @unit.contact_name %>
-</p>
-
-<p>
-  <b>Contact phone number:</b>
-  <%= @unit.contact_phone_number %>
-</p>
-
-<p>
-  <b>Address line 1:</b>
-  <%= @unit.address_line_1 %>
-</p>
-
-<p>
-  <b>Address line 2:</b>
-  <%= @unit.address_line_2 %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @unit.city %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%= @unit.state %>
-</p>
-
-<p>
-  <b>Zipcode:</b>
-  <%= @unit.zipcode %>
-</p>
-
-<p>
-  <b>Status:</b>
-  <%= @unit.status %>
-</p>
-
-<p>
-  <b>Availability:</b>
-  <%= @unit.availability %>
-</p>
-
-<p>
-  <b>Agent remarks:</b>
-  <%= @unit.agent_remarks %>
-</p>
-
-
-<%= link_to 'Edit', edit_unit_path(@unit) %> |
-<%= link_to 'Back', units_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              units_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_unit_path(@unit), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              unit_path(@unit),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

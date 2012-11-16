@@ -1,73 +1,86 @@
-<h1>Listing units</h1>
-
-<table>
-  <tr>
-    <th>Bedrooms</th>
-    <th>Bathrooms</th>
-    <th>Square footage</th>
-    <th>Available parking</th>
-    <th>Parking type</th>
-    <th>Date available</th>
-    <th>Monthly rent</th>
-    <th>Application fee</th>
-    <th>Application form</th>
-    <th>Pets allowed</th>
-    <th>Pet deposit</th>
-    <th>Access</th>
-    <th>Commission percentage</th>
-    <th>Occupant</th>
-    <th>Tenant name</th>
-    <th>Tenant phone number</th>
-    <th>Contact name</th>
-    <th>Contact phone number</th>
-    <th>Address line 1</th>
-    <th>Address line 2</th>
-    <th>City</th>
-    <th>State</th>
-    <th>Zipcode</th>
-    <th>Status</th>
-    <th>Availability</th>
-    <th>Agent remarks</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @units.each do |unit| %>
-  <tr>
-    <td><%= unit.bedrooms %></td>
-    <td><%= unit.bathrooms %></td>
-    <td><%= unit.square_footage %></td>
-    <td><%= unit.available_parking %></td>
-    <td><%= unit.parking_type %></td>
-    <td><%= unit.date_available %></td>
-    <td><%= unit.monthly_rent %></td>
-    <td><%= unit.application_fee %></td>
-    <td><%= unit.application_form %></td>
-    <td><%= unit.pets_allowed %></td>
-    <td><%= unit.pet_deposit %></td>
-    <td><%= unit.access %></td>
-    <td><%= unit.commission_percentage %></td>
-    <td><%= unit.occupant %></td>
-    <td><%= unit.tenant_name %></td>
-    <td><%= unit.tenant_phone_number %></td>
-    <td><%= unit.contact_name %></td>
-    <td><%= unit.contact_phone_number %></td>
-    <td><%= unit.address_line_1 %></td>
-    <td><%= unit.address_line_2 %></td>
-    <td><%= unit.city %></td>
-    <td><%= unit.state %></td>
-    <td><%= unit.zipcode %></td>
-    <td><%= unit.status %></td>
-    <td><%= unit.availability %></td>
-    <td><%= unit.agent_remarks %></td>
-    <td><%= link_to 'Show', unit %></td>
-    <td><%= link_to 'Edit', edit_unit_path(unit) %></td>
-    <td><%= link_to 'Destroy', unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+<%- model_class = Unit -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:bedrooms) %></th>
+      <th><%= model_class.human_attribute_name(:bathrooms) %></th>
+      <th><%= model_class.human_attribute_name(:square_footage) %></th>
+      <th><%= model_class.human_attribute_name(:available_parking) %></th>
+      <th><%= model_class.human_attribute_name(:parking_type) %></th>
+      <th><%= model_class.human_attribute_name(:date_available) %></th>
+      <th><%= model_class.human_attribute_name(:monthly_rent) %></th>
+      <th><%= model_class.human_attribute_name(:application_fee) %></th>
+      <th><%= model_class.human_attribute_name(:application_form) %></th>
+      <th><%= model_class.human_attribute_name(:pets_allowed) %></th>
+      <th><%= model_class.human_attribute_name(:pet_deposit) %></th>
+      <th><%= model_class.human_attribute_name(:access) %></th>
+      <th><%= model_class.human_attribute_name(:commission_percentage) %></th>
+      <th><%= model_class.human_attribute_name(:occupant) %></th>
+      <th><%= model_class.human_attribute_name(:tenant_name) %></th>
+      <th><%= model_class.human_attribute_name(:tenant_phone_number) %></th>
+      <th><%= model_class.human_attribute_name(:contact_name) %></th>
+      <th><%= model_class.human_attribute_name(:contact_phone_number) %></th>
+      <th><%= model_class.human_attribute_name(:address_line_1) %></th>
+      <th><%= model_class.human_attribute_name(:address_line_2) %></th>
+      <th><%= model_class.human_attribute_name(:city) %></th>
+      <th><%= model_class.human_attribute_name(:state) %></th>
+      <th><%= model_class.human_attribute_name(:zipcode) %></th>
+      <th><%= model_class.human_attribute_name(:status) %></th>
+      <th><%= model_class.human_attribute_name(:availability) %></th>
+      <th><%= model_class.human_attribute_name(:agent_remarks) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @units.each do |unit| %>
+      <tr>
+        <td><%= link_to unit.id, unit_path(unit) %></td>
+        <td><%= unit.bedrooms %></td>
+        <td><%= unit.bathrooms %></td>
+        <td><%= unit.square_footage %></td>
+        <td><%= unit.available_parking %></td>
+        <td><%= unit.parking_type %></td>
+        <td><%= unit.date_available %></td>
+        <td><%= unit.monthly_rent %></td>
+        <td><%= unit.application_fee %></td>
+        <td><%= unit.application_form %></td>
+        <td><%= unit.pets_allowed %></td>
+        <td><%= unit.pet_deposit %></td>
+        <td><%= unit.access %></td>
+        <td><%= unit.commission_percentage %></td>
+        <td><%= unit.occupant %></td>
+        <td><%= unit.tenant_name %></td>
+        <td><%= unit.tenant_phone_number %></td>
+        <td><%= unit.contact_name %></td>
+        <td><%= unit.contact_phone_number %></td>
+        <td><%= unit.address_line_1 %></td>
+        <td><%= unit.address_line_2 %></td>
+        <td><%= unit.city %></td>
+        <td><%= unit.state %></td>
+        <td><%= unit.zipcode %></td>
+        <td><%= unit.status %></td>
+        <td><%= unit.availability %></td>
+        <td><%= unit.agent_remarks %></td>
+        <td><%=l unit.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_unit_path(unit), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      unit_path(unit),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
-<br />
-
-<%= link_to 'New Unit', new_unit_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_unit_path,
+            :class => 'btn btn-primary' %>
