@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121114012829) do
+ActiveRecord::Schema.define(:version => 20121114012958) do
 
   create_table "units", :force => true do |t|
     t.integer  "bedrooms"
